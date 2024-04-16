@@ -9,10 +9,15 @@
   .key {
     border-radius: 5px;
     padding: 4px;
-    background-color: yellowgreen;
+    background-color: lightgray;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-basis: 2.2rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(240, 227, 211);
+    }
   }
 }

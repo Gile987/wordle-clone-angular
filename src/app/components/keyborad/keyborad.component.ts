@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { KEYS } from './data/keyboard.constants';
 import { IKeyboard } from './interface/keyboard.interface';
 
@@ -10,5 +10,10 @@ import { IKeyboard } from './interface/keyboard.interface';
   styleUrl: './keyborad.component.scss',
 })
 export class KeyboradComponent {
-  keys: IKeyboard[] = KEYS.map((key) => key);
+  @Output() keyPress: EventEmitter<string> = new EventEmitter<string>();
+  readonly keys: IKeyboard[] = KEYS.map((key: IKeyboard) => key);
+
+  onKeyPress(key: IKeyboard) {
+    this.keyPress.emit(key.value);
+  }
 }
