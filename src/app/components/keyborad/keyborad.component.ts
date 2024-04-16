@@ -10,10 +10,16 @@ import { IKeyboard } from './interface/keyboard.interface';
   styleUrl: './keyborad.component.scss',
 })
 export class KeyboradComponent {
-  @Output() keyPress: EventEmitter<string> = new EventEmitter<string>();
+  @Output() keyClick: EventEmitter<string> = new EventEmitter<string>();
+  @Output() keyPress: EventEmitter<KeyboardEvent> =
+    new EventEmitter<KeyboardEvent>();
   readonly keys: IKeyboard[] = KEYS.map((key: IKeyboard) => key);
 
-  onKeyPress(key: IKeyboard) {
-    this.keyPress.emit(key.value);
+  onKeyClick(key: IKeyboard) {
+    this.keyClick.emit(key.value);
+  }
+
+  onKeyPress(event: KeyboardEvent) {
+    this.keyPress.emit(event);
   }
 }

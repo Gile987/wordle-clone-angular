@@ -1,13 +1,7 @@
-<div class="keyboard">
+<div class="keyboard" tabindex="0" (keydown)="onKeyPress($event)">
   @for (key of keys; track key.id) {
-    <div
-      class="key"
-      role="button"
-      tabindex="0"
-      (click)="onKeyPress(key)"
-      (keydown)="onKeyPress(key)"
-    >
+    <button class="key" (click)="onKeyClick(key)">
       {{ key.value.toUpperCase() }}
-    </div>
+    </button>
   }
 </div>
