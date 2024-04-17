@@ -12,11 +12,7 @@ import { KeyboradComponent } from './components/keyborad/keyborad.component';
 export class AppComponent {
   title = 'wordle-clone-angular';
 
-  handleKeyClick(key: string) {
-    console.log('Key clicked: ', key);
-  }
-
-  handleKeyPress(event: KeyboardEvent) {
-    console.log('Key pressed: ', event.key);
+  handleKeyInput(key: string) {
+    console.log('Key entered: ', key);
   }
 }
