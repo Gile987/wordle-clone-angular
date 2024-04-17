@@ -4,13 +4,13 @@ import { IKeyboard } from './interface/keyboard.interface';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-keyborad',
+  selector: 'app-keyboard',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './keyborad.component.html',
-  styleUrl: './keyborad.component.scss',
+  templateUrl: './keyboard.component.html',
+  styleUrl: './keyboard.component.scss',
 })
-export class KeyboradComponent {
+export class KeyboardComponent {
   @Output() keyInput: EventEmitter<string> = new EventEmitter<string>();
   readonly keys: IKeyboard[] = KEYS.map((key: IKeyboard) => key);
 
