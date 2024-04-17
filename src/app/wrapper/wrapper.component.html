@@ -1,0 +1,7 @@
+<div class="wordle-wrapper" tabindex="0" (keydown)="handleKeyInput($event.key)">
+  <div class="wordle-container">
+    <h1>Turdle</h1>
+    <app-grid></app-grid>
+    <app-keyboard (keyInput)="handleKeyInput($event)"></app-keyboard>
+  </div>
+</div>
