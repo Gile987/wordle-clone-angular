@@ -1,0 +1,13 @@
+.wordle-wrapper {
+  width: 100%;
+  height: 100vh;
+
+  .wordle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 50rem;
+    gap: 2rem;
+  }
+}

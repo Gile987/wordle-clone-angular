@@ -17,8 +17,4 @@ export class KeyboardComponent {
   onKeyClick(key: string) {
     this.keyInput.emit(key);
   }
-
-  onKeyPress(key: string) {
-    this.onKeyClick(key);
-  }
 }
