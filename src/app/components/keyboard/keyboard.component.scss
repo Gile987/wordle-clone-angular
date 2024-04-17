@@ -1,0 +1,24 @@
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 32rem;
+  height: 10rem;
+  justify-content: center;
+
+  .key {
+    border-radius: 5px;
+    padding: 4px;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-basis: 2.7rem;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(240, 227, 211);
+    }
+  }
+}
